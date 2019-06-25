@@ -1,0 +1,20 @@
+{
+  "name": "mern-project",
+  "version": "1.0.0",
+  "description": "Shopping list built with the MERN stack",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "author": "Isao Kozakai",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^4.1.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
