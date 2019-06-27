@@ -15,6 +15,14 @@ export default (state = initialState, action) => {
       return {
         ...state
       };
+    case 'DELETE_ITEM':
+      return {
+        items: state.items.filter(item => item.id !== action.id)
+      };
+    case 'ADD_ITEM':
+      return {
+        items: [...state.items, action.item]
+      };
     default:
       return state;
   }
