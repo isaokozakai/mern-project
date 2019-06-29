@@ -5,10 +5,10 @@ export const getItems = () => dispatch => {
   axios
     .get('/api/items')
     .then(res => 
-        dispatch({
-          type: 'GET_ITEMS',
-          items: res.data
-        }))
+      dispatch({
+        type: 'GET_ITEMS',
+        items: res.data
+      }))
 };
 
 export const addItem = (item) => dispatch => {
