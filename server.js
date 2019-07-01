@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
 
+const users = require('./routes/api/users');
 const items = require('./routes/api/items');
 
 const app = express();
@@ -13,11 +14,16 @@ app.use(express.json());
 const db = require('./config/keys').mongoURI;
 
 // Connect to Mongo
-mongoose.connect(db, { useNewUrlParser: true })
+mongoose
+  .connect(db, {
+    useNewUrlParser: true,
+    useCreateIndex: true
+  })
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.log(err));
 
 // Use Routes
+app.use(users);
 app.use(items);
 
 // Server static assets if in production
