@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import AppNavbar from './components/AppNavbar';
-import ShoppingList from './components/ShoppingList';
+import ItemList from './components/ItemList';
 import ItemModal from './components/ItemModal';
 import { Container } from 'reactstrap'
 
@@ -22,7 +22,7 @@ function App() {
         <AppNavbar />
         <Container>
           <ItemModal />
-          <ShoppingList />
+          <ItemList />
         </Container>
       </div>
     </Provider>
